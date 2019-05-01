@@ -12,6 +12,7 @@ public class CallCamera : MonoBehaviour
     public string deviceName;
     //显示摄像头画面
     public RawImage rawImage;
+    public int WhichCam = 0;
 
     // Use this for initialization
     void Start()
@@ -25,7 +26,7 @@ public class CallCamera : MonoBehaviour
         if (Application.HasUserAuthorization(UserAuthorization.WebCam))
         {
             WebCamDevice[] devices = WebCamTexture.devices;
-            deviceName = devices[0].name;
+            deviceName = devices[WhichCam].name;
             //设置摄像机摄像的区域    
             webTex = new WebCamTexture(deviceName, 1920, 1080, 60);
             webTex.Play();//开始摄像    

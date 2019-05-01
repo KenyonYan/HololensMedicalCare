@@ -39,8 +39,6 @@ public class FaceDetect : MonoBehaviour
     void Start()
     {
         faceInfo = new GetInfoFromFace();
-
-        faceInfo.info = new GetInfoFromFace.SearchFaceMatchInfo();
         client = new Face(API_KEY, SECRET_KEY);
         //  创建GestureRecognizer实例
         gestureRecognizer = new GestureRecognizer();
@@ -104,10 +102,10 @@ public class FaceDetect : MonoBehaviour
         var groupIdList = "Patient";
 
         var result = client.Search(image, imageType, groupIdList);
-        float score = faceInfo.ParseJson(result);
+        //float score = faceInfo.ParseJson(result);
         //text.text = result.ToString();
-        //Debug.Log(result);
-        print(score);
+        string res = result.ToString();
+        Debug.Log(res);
     }
 
 

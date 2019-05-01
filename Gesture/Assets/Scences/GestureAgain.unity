@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45142984, g: 0.50067633, b: 0.5709986, a: 1}
+  m_IndirectSpecularColor: {r: 0.45142937, g: 0.5006756, b: 0.57099754, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -953,6 +953,14 @@ Prefab:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4600145158608852, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766909944503646, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
   m_IsPrefabParent: 0
@@ -1072,7 +1080,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1489354445}
+  m_Father: {fileID: 1662080412}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1016362595
@@ -1443,6 +1451,7 @@ MonoBehaviour:
   webTex: {fileID: 0}
   deviceName: 
   rawImage: {fileID: 1200906440}
+  WhichCam: 1
 --- !u!114 &1311922668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,11 +1583,6 @@ Prefab:
 --- !u!20 &1489354444 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20049547090947856, guid: 3eddd1c29199313478dd3f912bfab2ab,
-    type: 2}
-  m_PrefabInternal: {fileID: 1256876096}
---- !u!4 &1489354445 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4977849313536866, guid: 3eddd1c29199313478dd3f912bfab2ab,
     type: 2}
   m_PrefabInternal: {fileID: 1256876096}
 --- !u!1 &1606494959
@@ -1720,6 +1724,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4066297474642280, guid: 492eac39144713844b96457db94893ff,
     type: 2}
   m_PrefabInternal: {fileID: 1016362595}
+--- !u!4 &1662080412 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4587520633816736, guid: d29bc40b7f3df26479d6a0aac211c355,
+    type: 2}
+  m_PrefabInternal: {fileID: 962730085}
 --- !u!1 &1666880553
 GameObject:
   m_ObjectHideFlags: 0
