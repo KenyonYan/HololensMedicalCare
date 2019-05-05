@@ -17,13 +17,26 @@ public class TextLookAtCam : MonoBehaviour {
     void Start()
     {
         //获取当前的显示的模型
-        nowModel = GameObject.Find("AxisY").GetComponentInChildren<Transform>();
+        GameObject axisY = GameObject.Find("AxisY");
+        foreach (Transform child in axisY.transform)
+        {
+            nowModel = child;
+            break;
+        }
+        //nowModel = GameObject.Find("AxisY").GetComponentInChildren<Transform>();
         //计算偏移值
         offset = this.transform.position - nowModel.transform.position;
     }
 
     void Update ()
     {
+        //获取当前的显示的模型
+        GameObject axisY = GameObject.Find("AxisY");
+        foreach (Transform child in axisY.transform)
+        {
+            nowModel = child;
+            break;
+        }
         //通过插值移动到目标位置，最后一个参数是速度
         this.transform.position = Vector3.Lerp(this.transform.position, nowModel.transform.position + offset, Time.deltaTime * 5.0f);
         //if(transform.position == nowModel.transform.position + offset)
