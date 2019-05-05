@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowModel : MonoBehaviour {
+public class FollowModel : MonoBehaviour
+{
 
     private Transform nowModel;         //当前显示的模型
     private Vector3 offset;             //操作面板与模型之间位置的偏移值

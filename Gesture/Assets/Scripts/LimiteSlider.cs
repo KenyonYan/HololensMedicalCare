@@ -1,12 +1,15 @@
 ﻿using HoloToolkit.Unity.InputModule;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// GestureAction performs custom actions based on
 /// which gesture is being performed.
 /// </summary>
-public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHandler, ISpeechHandler
+public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHandler
 {
+    public Slider slider;
+
     [Tooltip("Rotation max speed controls amount of rotation.")]
     [SerializeField]
     private float RotationSensitivity = 10.0f;
@@ -69,7 +72,14 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
             /* TODO: DEVELOPER CODING EXERCISE 4.a */
 
             // 4.a: Make this transform's position be the manipulationOriginalPosition + eventData.CumulativeDelta
-            transform.position = manipulationOriginalPosition + eventData.CumulativeDelta;
+            //transform.position = manipulationOriginalPosition + eventData.CumulativeDelta;
+            Vector3 tmp = manipulationOriginalPosition + eventData.CumulativeDelta;
+            if(tmp.x < 0)
+            {
+                tmp = new Vector3(0, tmp.y, tmp.z);
+            }
+            
+            transform.position = new Vector3(tmp.x, transform.position.y, transform.position.z);
         }
     }
 
@@ -81,22 +91,5 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
     void IManipulationHandler.OnManipulationCanceled(ManipulationEventData eventData)
     {
         InputManager.Instance.PopModalInputHandler();
-    }
-
-    void ISpeechHandler.OnSpeechKeywordRecognized(SpeechEventData eventData)
-    {
-        if (eventData.RecognizedText.Equals("Move"))
-        {
-            isNavigationEnabled = false;
-        }
-        else if (eventData.RecognizedText.Equals("Rotate"))
-        {
-            isNavigationEnabled = true;
-        }
-        else
-        {
-            return;
-        }
-        eventData.Use();
     }
 }
