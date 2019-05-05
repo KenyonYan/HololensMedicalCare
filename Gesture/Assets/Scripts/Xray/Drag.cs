@@ -6,23 +6,23 @@ using UnityEngine.UI;
 
 public class Drag : MonoBehaviour {
 
-    public Texture[] Lugu;
-    public Slider slider;
-    public RawImage xraySection;
+    public Texture[] Lugu;               //颅骨的x光图片
+    public Slider slider;                //滑动条
+    public GameObject xraySection;       //移动的x切片
 
-    private float sliderValue;
-    private Vector3 startPosition;
+    private float sliderValue;           //滑动条的数值
+    private Vector3 startPosition;       //x切片开始位置
 
 
 
-	// Use this for initialization
+	
 	void Start ()
     {
         this.GetComponent<RawImage>().texture = Lugu[0];
         startPosition = xraySection.transform.position;
 	}
 	
-	// Update is called once per frame
+	
 	void Update ()
     {
         sliderValue = slider.value;

@@ -1,6 +1,9 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
+        <UnityWSASolutionName>Gesture</UnityWSASolutionName>
+        <UnityWSASolutionDir>F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\</UnityWSASolutionDir>
+        <UnityProjectDir>F:\Kenyon\Github Project\HololensMedicalCare\Gesture\</UnityProjectDir>
         <UnityWSAPlayerDir>E:\Unity 2017.4.23\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
-        <UnityWSAToolsDir>$(SolutionDir)Unity\Tools\</UnityWSAToolsDir>
+        <UnityWSAToolsDir>$(UnityWSASolutionDir)Unity\Tools\</UnityWSAToolsDir>
     </PropertyGroup>
 </Project>

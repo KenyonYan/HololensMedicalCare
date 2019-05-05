@@ -16071,12 +16071,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "F:\\Kenyon\\Github Project\\Hololens-Gesture\\Gesture\\App\\Gesture\\Gesture.csproj",
+      "projectUniqueName": "F:\\Kenyon\\Github Project\\HololensMedicalCare\\Gesture\\App\\Gesture\\Gesture.csproj",
       "projectName": "Gesture",
-      "projectPath": "F:\\Kenyon\\Github Project\\Hololens-Gesture\\Gesture\\App\\Gesture\\Gesture.csproj",
-      "projectJsonPath": "F:\\Kenyon\\Github Project\\Hololens-Gesture\\Gesture\\App\\Gesture\\project.json",
+      "projectPath": "F:\\Kenyon\\Github Project\\HololensMedicalCare\\Gesture\\App\\Gesture\\Gesture.csproj",
+      "projectJsonPath": "F:\\Kenyon\\Github Project\\HololensMedicalCare\\Gesture\\App\\Gesture\\project.json",
       "packagesPath": "C:\\Users\\19167\\.nuget\\packages\\",
-      "outputPath": "F:\\Kenyon\\Github Project\\Hololens-Gesture\\Gesture\\App\\Gesture\\obj\\",
+      "outputPath": "F:\\Kenyon\\Github Project\\HololensMedicalCare\\Gesture\\App\\Gesture\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\19167\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -16089,8 +16089,8 @@
       "frameworks": {
         "uap10.0.10240": {
           "projectReferences": {
-            "F:\\Kenyon\\Github Project\\Hololens-Gesture\\Gesture\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj": {
-              "projectPath": "F:\\Kenyon\\Github Project\\Hololens-Gesture\\Gesture\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj"
+            "F:\\Kenyon\\Github Project\\HololensMedicalCare\\Gesture\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj": {
+              "projectPath": "F:\\Kenyon\\Github Project\\HololensMedicalCare\\Gesture\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj"
             }
           }
         }

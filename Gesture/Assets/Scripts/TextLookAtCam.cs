@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TextLookAtCam : MonoBehaviour {
-
+ 
     private Transform nowModel;         //当前显示的模型
     private Vector3 offset;             //操作面板与模型之间位置的偏移值
     //private bool isArrive = false;      //是否到达指定位置
