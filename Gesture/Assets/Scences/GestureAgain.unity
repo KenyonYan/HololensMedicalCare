@@ -700,7 +700,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609532073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0010070801, y: -0.09400582, z: 1.94}
+  m_LocalPosition: {x: 0.016, y: -0.09400582, z: 1.875}
   m_LocalScale: {x: 0.038535733, y: 0.036451984, z: 0.039241437}
   m_Children: []
   m_Father: {fileID: 0}
@@ -728,19 +728,19 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 670387893}
-  m_LocalRotation: {x: -0, y: -0.24574047, z: -0, w: 0.9693356}
-  m_LocalPosition: {x: 0, y: 0, z: 1.705}
-  m_LocalScale: {x: 0.0061588944, y: 0.0061588944, z: 0.0061588944}
+  m_LocalRotation: {x: 0, y: -0.12619898, z: 0, w: 0.992005}
+  m_LocalPosition: {x: 0, y: 0, z: 1.846}
+  m_LocalScale: {x: 0.0030088492, y: 0.00300885, z: 0.00300885}
   m_Children:
   - {fileID: 256562033}
   - {fileID: 2047995145}
   - {fileID: 2030707640}
   m_Father: {fileID: 364685928}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: -28.451002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -14.5, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371.356, y: -454.90405}
+  m_AnchoredPosition: {x: -371.02405, y: -454.71027}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &670387895
@@ -815,16 +815,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672060498}
-  m_LocalRotation: {x: -0, y: -0.24574204, z: -0, w: 0.9693353}
-  m_LocalPosition: {x: 0, y: 0, z: 1.705}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.12619898, z: 0, w: 0.992005}
+  m_LocalPosition: {x: 0, y: 0, z: 1.846}
+  m_LocalScale: {x: 0.45522618, y: 0.45522612, z: 0.45522612}
   m_Children: []
   m_Father: {fileID: 364685928}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -28.451002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -14.5, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -371.356, y: -454.236}
+  m_AnchoredPosition: {x: -371.02405, y: -454.4453}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672060500
@@ -2249,10 +2249,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Models:
   - {fileID: 1530056891892838, guid: b1f589030cf401349ba50f923d6344a2, type: 2}
-  - {fileID: 1978419493011352, guid: f86d0772f12a50540a3479770401b02a, type: 2}
   - {fileID: 1980372537541246, guid: f07005e343d723f40a10545a1d8d68f7, type: 2}
   - {fileID: 1065632880420952, guid: 14c5ec58f65a97c4493cd55d3ad6e7f1, type: 2}
   - {fileID: 1655248073147528, guid: c939ee69efcfc584fbba58cb837bbdc8, type: 2}
+  - {fileID: 1978419493011352, guid: f86d0772f12a50540a3479770401b02a, type: 2}
   HololensMoveText: {fileID: 1693253424}
   HololensRotateText: {fileID: 874465175}
   HololensNextModel: {fileID: 218909585}
