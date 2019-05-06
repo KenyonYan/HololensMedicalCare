@@ -8,7 +8,15 @@ using UnityEngine.UI;
 /// </summary>
 public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHandler
 {
-    public Slider slider;
+    //public Slider slider;
+
+    private Vector3 startPostion;
+
+    void Start()
+    {
+        startPostion = this.transform.position;
+    }
+
 
     [Tooltip("Rotation max speed controls amount of rotation.")]
     [SerializeField]
@@ -61,7 +69,7 @@ public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHand
         {
             InputManager.Instance.PushModalInputHandler(gameObject);
 
-            manipulationOriginalPosition = transform.position;
+            manipulationOriginalPosition = new Vector3(transform.position.x, startPostion.y, startPostion.z);
         }
     }
 
@@ -73,13 +81,20 @@ public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHand
 
             // 4.a: Make this transform's position be the manipulationOriginalPosition + eventData.CumulativeDelta
             //transform.position = manipulationOriginalPosition + eventData.CumulativeDelta;
-            Vector3 tmp = manipulationOriginalPosition + eventData.CumulativeDelta;
-            if(tmp.x < 0)
+            Vector3 tmp = manipulationOriginalPosition + new Vector3(eventData.CumulativeDelta.x, startPostion.y, startPostion.z);
+            if(tmp.x <= startPostion.x)
             {
-                tmp = new Vector3(0, tmp.y, tmp.z);
+                print("11111");
+                tmp = new Vector3(startPostion.x, startPostion.y, startPostion.z);
             }
-            
-            transform.position = new Vector3(tmp.x, transform.position.y, transform.position.z);
+
+            transform.position = new Vector3(tmp.x, startPostion.y, startPostion.z);
+
+            if(transform.position.x >= 140)
+            {
+                print("超过140");
+                transform.position = new Vector3(140f, startPostion.y, startPostion.z);
+            }
         }
     }
 
