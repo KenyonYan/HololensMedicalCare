@@ -84,16 +84,15 @@ public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHand
             Vector3 tmp = manipulationOriginalPosition + new Vector3(eventData.CumulativeDelta.x, startPostion.y, startPostion.z);
             if(tmp.x <= startPostion.x)
             {
-                print("11111");
                 tmp = new Vector3(startPostion.x, startPostion.y, startPostion.z);
             }
 
             transform.position = new Vector3(tmp.x, startPostion.y, startPostion.z);
 
-            if(transform.position.x >= 140)
+            //这里取得是世界坐标的值
+            if(transform.position.x >= -0.3138428f)
             {
-                print("超过140");
-                transform.position = new Vector3(140f, startPostion.y, startPostion.z);
+                transform.position = new Vector3(-0.3138428f, startPostion.y, startPostion.z);
             }
         }
     }
