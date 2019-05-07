@@ -11,6 +11,12 @@ public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHand
     //public Slider slider;
 
     private Vector3 startPostion;
+    private float sliderValue;
+
+    public float GetSliderValue()           //获取此时slider的值
+    {
+        return sliderValue;
+    }
 
     void Start()
     {
@@ -89,11 +95,13 @@ public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHand
 
             transform.position = new Vector3(tmp.x, startPostion.y, startPostion.z);
 
+            print(transform.position.x);
             //这里取得是世界坐标的值
-            if(transform.position.x >= -0.3138428f)
+            if(transform.position.x >= -0.3684082f)
             {
-                transform.position = new Vector3(-0.3138428f, startPostion.y, startPostion.z);
+                transform.position = new Vector3(-0.3684082f, startPostion.y, startPostion.z);
             }
+            sliderValue = Mathf.Abs(transform.position.x - startPostion.x) / Mathf.Abs(-0.3138428f - startPostion.x);
         }
     }
 

@@ -9,6 +9,7 @@ public class ButtonFunction : MonoBehaviour {
     public GameObject HololensMoveText;     //移动按钮
     public GameObject HololensRotateText;   //旋转按钮
     public GameObject HololensNextModel;    //切换按钮
+    
 
     private GestureAction gesAction;                       //控制旋转和移动的手势脚本
     private GestureRecognizer gestureRecognizer;           //手势识别脚本
@@ -103,10 +104,15 @@ public class ButtonFunction : MonoBehaviour {
     {
         //print("改变模型");
         _indexOfModels = (_indexOfModels + 1) % Models.Length;              //下标循环
-        Transform trans = _displayModel.transform;              //获取模型位置组件，
+        Transform trans = _displayModel.transform;
+        //获取模型位置组件，
+        //Vector3 trans = _displayModel.transform.TransformPoint(_displayModel.transform.localPosition);     //获取模型世界坐标
+        print(trans.position.x + "," + trans.position.y + "," + trans.position.z + trans.name);
+        
         Destroy(_displayModel);            //销毁当前显示的模型
         //在之前模型的位置再次生成新的模型，避免造成新模型回到初始位置
         _displayModel = Instantiate(Models[_indexOfModels], trans.position, Models[_indexOfModels].transform.rotation);
+        //_displayModel = Instantiate(Models[_indexOfModels], trans, Models[_indexOfModels].transform.rotation);
         _displayModel.transform.parent = _axisY.transform;
     }
 }

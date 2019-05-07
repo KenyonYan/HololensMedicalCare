@@ -17,19 +17,22 @@ public class Drag : MonoBehaviour {
     private float sliderValue;           //滑动条的数值
     private Vector3 startPosition;       //x切片开始位置
     private Transform nowModel;          //当前显示的模型
+    private LimiteSlider limitSlider;    //限制滑动的脚本
 
 
 
     void Start ()
     {
         startPosition = xraySection.transform.position;
-	}
+        limitSlider = FindObjectOfType<LimiteSlider>();
+    }
 	
 	
 	void Update ()
     {
-        sliderValue = slider.value;
-        int index = (int)(sliderValue * (Lugu.Length - 1));
+        //sliderValue = slider.value;
+        sliderValue = limitSlider.GetSliderValue();
+        int index = (int)(sliderValue * 29);
         xraySection.transform.position = new Vector3(startPosition.x, startPosition.y+(float)index*0.01f , startPosition.z);
         //print(index);
         WhichXPicToShow(index);
