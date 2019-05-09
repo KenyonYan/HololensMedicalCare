@@ -23,7 +23,7 @@ public class Drag : MonoBehaviour {
 
     void Start ()
     {
-        startPosition = xraySection.transform.position;
+        startPosition = xraySection.transform.localPosition;
         limitSlider = FindObjectOfType<LimiteSlider>();
     }
 	
@@ -32,11 +32,13 @@ public class Drag : MonoBehaviour {
     {
         //sliderValue = slider.value;
         sliderValue = limitSlider.GetSliderValue();
+        slider.value = sliderValue;                     //同步slider的值的变化
+        //print("滑动条的值：" + sliderValue);
         int index = (int)(sliderValue * 29);
-        xraySection.transform.position = new Vector3(startPosition.x, startPosition.y+(float)index*0.01f , startPosition.z);
+        print(index);
+        xraySection.transform.localPosition = new Vector3(startPosition.x, startPosition.y+(float)index*0.01f , startPosition.z);
         //print(index);
         WhichXPicToShow(index);
-        //this.GetComponent<RawImage>().texture = Lugu[index];
     }
 
     private void WhichXPicToShow(int index)
@@ -46,7 +48,10 @@ public class Drag : MonoBehaviour {
         foreach (Transform child in axisY.transform)
         {
             nowModel = child;
-            break;
+            if(nowModel.name != "section")
+            {
+                break;
+            }
         }
 
         //print(nowModel.name);
