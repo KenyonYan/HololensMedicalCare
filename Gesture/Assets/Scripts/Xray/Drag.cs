@@ -35,7 +35,7 @@ public class Drag : MonoBehaviour {
         slider.value = sliderValue;                     //同步slider的值的变化
         //print("滑动条的值：" + sliderValue);
         int index = (int)(sliderValue * 29);
-        print(index);
+        //print(index);
         xraySection.transform.localPosition = new Vector3(startPosition.x, startPosition.y+(float)index*0.01f , startPosition.z);
         //print(index);
         WhichXPicToShow(index);
