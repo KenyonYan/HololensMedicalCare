@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keywords:
-  - Keyword: Print
+  - Keyword: Rotate
     Response:
       m_PersistentCalls:
         m_Calls:
@@ -1573,8 +1573,6 @@ MonoBehaviour:
     KeyCode: 109
   - Keyword: Rotate
     KeyCode: 114
-  - Keyword: Print
-    KeyCode: 112
   recognitionConfidenceLevel: 1
 --- !u!114 &1158520112
 MonoBehaviour:
