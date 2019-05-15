@@ -41,6 +41,7 @@
     <uap:Capability Name="picturesLibrary" />
     <uap:Capability Name="videosLibrary" />
     <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="microphone" />
   </Capabilities>
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">

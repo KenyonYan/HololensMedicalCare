@@ -107,7 +107,7 @@ public class ButtonFunction : MonoBehaviour {
         Transform trans = _displayModel.transform;
         //获取模型位置组件，
         //Vector3 trans = _displayModel.transform.TransformPoint(_displayModel.transform.localPosition);     //获取模型世界坐标
-        print(trans.position.x + "," + trans.position.y + "," + trans.position.z + trans.name);
+        //print(trans.position.x + "," + trans.position.y + "," + trans.position.z + trans.name);
         
         Destroy(_displayModel);            //销毁当前显示的模型
         //在之前模型的位置再次生成新的模型，避免造成新模型回到初始位置

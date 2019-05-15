@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class VoiceTest : MonoBehaviour {
 
-    public GameObject gameObject;
-    bool isRotate = false;
+    private ChangeModel changeModel;
 
-	// Use this for initialization
-	void Start () {
-		
+
+    // Use this for initialization
+    void Start ()
+    {
+        changeModel = FindObjectOfType<ChangeModel>();	
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (isRotate)
-        {
-            gameObject.transform.Rotate(new Vector3(0, 1, 0));
-        }
+        
     }
 
-    public void TestSound()
+    public void NextModel()
     {
-        isRotate = !isRotate;
+        changeModel.ChangeNewModel();
     }
 }
