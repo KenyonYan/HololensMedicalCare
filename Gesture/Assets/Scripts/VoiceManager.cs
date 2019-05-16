@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class VoiceManager : MonoBehaviour {
 
-    private ButtonFunction changeModel;
+    private ButtonFunction changeModel;            //改变模型的脚本
+
 
 
     // Use this for initialization
@@ -21,6 +22,6 @@ public class VoiceManager : MonoBehaviour {
 
     public void NextModel()
     {
-        changeModel.ChangeModel();
+        changeModel.ChangeModel();              //切换模型
     }
 }
