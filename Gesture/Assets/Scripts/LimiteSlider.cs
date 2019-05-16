@@ -9,9 +9,11 @@ using UnityEngine.UI;
 public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHandler
 {
     //public Slider slider;
+    public GameObject sliderStartPoint;      //Slider滑动的开始点，解决Handle随物体移动保留在之前位置的问题
 
-    private Vector3 startPostion;
-    private float sliderValue;
+
+    private Vector3 startPostion;           //滑动条开始的位置
+    private float sliderValue;              //Slider值   
 
     public float GetSliderValue()           //获取此时slider的值
     {
@@ -88,7 +90,9 @@ public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHand
             // 4.a: Make this transform's position be the manipulationOriginalPosition + eventData.CumulativeDelta
             //transform.position = manipulationOriginalPosition + eventData.CumulativeDelta;
             Vector3 tmp = manipulationOriginalPosition + new Vector3(eventData.CumulativeDelta.x, startPostion.y, startPostion.z);
-            if(tmp.x <= startPostion.x)
+
+            startPostion = sliderStartPoint.transform.position;
+            if (tmp.x <= startPostion.x)
             {
                 tmp = new Vector3(startPostion.x, startPostion.y, startPostion.z);
             }
@@ -96,11 +100,12 @@ public class LimiteSlider : MonoBehaviour, INavigationHandler, IManipulationHand
             transform.position = new Vector3(tmp.x, startPostion.y, startPostion.z);
             //print(transform.position.x);
             //这里取得是世界坐标的值
-            if(transform.position.x >= -0.3690491f)
+            float terminalX = startPostion.x + 0.4197082f;
+            if (transform.position.x >= terminalX)
             {
-                transform.position = new Vector3(-0.3690491f, startPostion.y, startPostion.z);
+                transform.position = new Vector3(terminalX, startPostion.y, startPostion.z);
             }
-            sliderValue = Mathf.Abs(transform.position.x - startPostion.x) / Mathf.Abs(-0.3690491f - startPostion.x);
+            sliderValue = Mathf.Abs(transform.position.x - startPostion.x) / Mathf.Abs((startPostion.x + 0.4197082f) - startPostion.x);
         }
     }
 

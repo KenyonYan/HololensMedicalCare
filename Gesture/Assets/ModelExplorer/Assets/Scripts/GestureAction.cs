@@ -12,6 +12,15 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
     private float RotationSensitivity = 10.0f;
 
     private bool isNavigationEnabled = true;
+
+    private ButtonFunction bFunction;                   //按钮功能脚本
+
+    void Start()
+    {
+        bFunction = FindObjectOfType<ButtonFunction>();
+    }
+
+
     public bool IsNavigationEnabled
     {
         get { return isNavigationEnabled; }
@@ -88,10 +97,12 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
         if (eventData.RecognizedText.Equals("Move"))
         {
             isNavigationEnabled = false;
+            bFunction.ChangeR2MText();              //文本切换为旋转
         }
         else if (eventData.RecognizedText.Equals("Rotate"))
         {
             isNavigationEnabled = true;
+            bFunction.ChangeM2RText();              //文本切换为移动
         }
         else
         {

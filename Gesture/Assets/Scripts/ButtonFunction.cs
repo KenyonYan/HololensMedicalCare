@@ -89,16 +89,27 @@ public class ButtonFunction : MonoBehaviour {
     private void MoveButton()
     {
         gesAction.IsNavigationEnabled = false;
-        HololensMoveText.SetActive(false);
-        HololensRotateText.SetActive(true);
+        ChangeR2MText();
     }
 
     private void RotateButton()
     {
         gesAction.IsNavigationEnabled = true;
+        ChangeM2RText();
+    }
+
+    public void ChangeM2RText()
+    {
         HololensMoveText.SetActive(true);
         HololensRotateText.SetActive(false);
     }
+
+    public void ChangeR2MText()
+    {
+        HololensMoveText.SetActive(false);
+        HololensRotateText.SetActive(true);
+    }
+
 
     public void ChangeModel()
     {

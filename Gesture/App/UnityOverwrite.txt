@@ -8,7 +8,7 @@
 Gesture.sln: modified
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 1D02BC64BAC0D041019673A1C4C51737
 Gesture\App.cs: modified
-Gesture\Gesture.csproj: A61F0E52C8A3F15AAC4422C776F54578
+Gesture\Gesture.csproj: 9858D6163D2DD439C24087C69156F228
 Gesture\Gesture.csproj.user: modified
 Gesture\Package.appxmanifest: 24D027FBFF5184B77677525797FA575F
 Gesture\project.json: 1D02BC64BAC0D041019673A1C4C51737
