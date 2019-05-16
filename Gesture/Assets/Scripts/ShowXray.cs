@@ -5,9 +5,12 @@ using UnityEngine.XR.WSA.Input;
 using HoloToolkit.Unity.InputModule;
 
 
-public class ShowXray : MonoBehaviour {
-
+public class ShowXray : MonoBehaviour, IHoldHandler
+{
     private GestureRecognizer gestureRecognizer;           //手势识别脚本
+    public GameObject xrayPic;
+    public GameObject slider;
+    public GameObject section;
 
 
     void Start ()
@@ -36,7 +39,23 @@ public class ShowXray : MonoBehaviour {
 
     private void OnHoldTap()
     {
-        print("11111111111");
+        xrayPic.SetActive(false);
+        slider.SetActive(false);
+        section.SetActive(false);
     }
 
+    public void OnHoldStarted(HoldEventData eventData)
+    {
+        
+    }
+
+    public void OnHoldCompleted(HoldEventData eventData)
+    {
+        
+    }
+
+    public void OnHoldCanceled(HoldEventData eventData)
+    {
+        
+    }
 }

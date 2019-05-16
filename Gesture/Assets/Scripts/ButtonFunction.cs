@@ -100,7 +100,7 @@ public class ButtonFunction : MonoBehaviour {
         HololensRotateText.SetActive(false);
     }
 
-    private void ChangeModel()
+    public void ChangeModel()
     {
         //print("改变模型");
         _indexOfModels = (_indexOfModels + 1) % Models.Length;              //下标循环

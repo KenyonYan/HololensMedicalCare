@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VoiceTest : MonoBehaviour {
+public class VoiceManager : MonoBehaviour {
 
-    private ChangeModel changeModel;
+    private ButtonFunction changeModel;
 
 
     // Use this for initialization
     void Start ()
     {
-        changeModel = FindObjectOfType<ChangeModel>();	
+        changeModel = FindObjectOfType<ButtonFunction>();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +21,6 @@ public class VoiceTest : MonoBehaviour {
 
     public void NextModel()
     {
-        changeModel.ChangeNewModel();
+        changeModel.ChangeModel();
     }
 }
