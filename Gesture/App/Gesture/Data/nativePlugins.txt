@@ -1,3 +1,5 @@
 PlaneFinding.dll
 MicStreamSelector.dll
 GpuTiming.dll
+VuforiaWrapper.dll
+Vuforia.dll

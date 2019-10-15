@@ -36,7 +36,7 @@ public class ShowTextBoard : MonoBehaviour
 
     public void OnDoubleTap()
     {
-        print("222222");
+        //print("222222");
         if(!isShow)
         {
             textBoard.SetActive(true);              //显示面板

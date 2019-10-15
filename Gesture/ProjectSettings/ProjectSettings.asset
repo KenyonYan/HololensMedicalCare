@@ -146,7 +146,7 @@ PlayerSettings:
       maximumSupportedHeadTracking: 1
     hololens:
       depthFormat: 1
-      depthBufferSharingEnabled: 0
+      depthBufferSharingEnabled: 1
     oculus:
       sharedDepthBuffer: 0
       dashSupport: 0
@@ -263,7 +263,9 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - WindowsMR
-  m_BuildTargetEnableVuforiaSettings: []
+  m_BuildTargetEnableVuforiaSettings:
+  - m_BuildTarget: Metro
+    m_Enabled: 1
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   m_TemplateCustomTags: {}

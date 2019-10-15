@@ -403,6 +403,18 @@
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\Vuforia\VuforiaMars_Images.xml">
+      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_Images.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml">
+      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml">
+      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml">
+      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\PlaneFinding.dll">
       <PackagePath>PlaneFinding.dll</PackagePath>
     </AppxPackagedFile>
@@ -411,6 +423,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\GpuTiming.dll">
       <PackagePath>GpuTiming.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\VuforiaWrapper.dll">
+      <PackagePath>VuforiaWrapper.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Vuforia.dll">
+      <PackagePath>Vuforia.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\boot.config">
       <PackagePath>Data\boot.config</PackagePath>
@@ -460,11 +478,26 @@
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\CameraFaceDetect\CameraFace.jpg">
       <PackagePath>Data\StreamingAssets\CameraFaceDetect\CameraFace.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\Vuforia\VuforiaMars_Images.dat">
+      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_Images.dat</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.dat">
+      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.dat</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.dat">
+      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_Object_OT.dat</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.dat">
+      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaMars_VuMark.dat</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\bin\x86\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.TextRenderingModule.dll">
+      <PackagePath>UnityEngine.TextRenderingModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.TerrainPhysicsModule.dll">
       <PackagePath>UnityEngine.TerrainPhysicsModule.dll</PackagePath>
@@ -472,14 +505,11 @@
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.TerrainModule.dll">
       <PackagePath>UnityEngine.TerrainModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.StyleSheetsModule.dll">
-      <PackagePath>UnityEngine.StyleSheetsModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.TextRenderingModule.dll">
-      <PackagePath>UnityEngine.TextRenderingModule.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.TilemapModule.dll">
       <PackagePath>UnityEngine.TilemapModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UIElementsModule.dll">
+      <PackagePath>UnityEngine.UIElementsModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.SharedInternalsModule.dll">
       <PackagePath>UnityEngine.SharedInternalsModule.dll</PackagePath>
@@ -487,17 +517,20 @@
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.ScreenCaptureModule.dll">
       <PackagePath>UnityEngine.ScreenCaptureModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.PhysicsModule.dll">
-      <PackagePath>UnityEngine.PhysicsModule.dll</PackagePath>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.SpriteMaskModule.dll">
+      <PackagePath>UnityEngine.SpriteMaskModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.StyleSheetsModule.dll">
+      <PackagePath>UnityEngine.StyleSheetsModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.SpriteShapeModule.dll">
       <PackagePath>UnityEngine.SpriteShapeModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.SpriteMaskModule.dll">
-      <PackagePath>UnityEngine.SpriteMaskModule.dll</PackagePath>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UIModule.dll">
+      <PackagePath>UnityEngine.UIModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UIElementsModule.dll">
-      <PackagePath>UnityEngine.UIElementsModule.dll</PackagePath>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.VRModule.dll">
+      <PackagePath>UnityEngine.VRModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.VideoModule.dll">
       <PackagePath>UnityEngine.VideoModule.dll</PackagePath>
@@ -505,17 +538,14 @@
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.VehiclesModule.dll">
       <PackagePath>UnityEngine.VehiclesModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityWebRequestWWWModule.dll">
-      <PackagePath>UnityEngine.UnityWebRequestWWWModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.VRModule.dll">
-      <PackagePath>UnityEngine.VRModule.dll</PackagePath>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.WebModule.dll">
+      <PackagePath>UnityEngine.WebModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.WindModule.dll">
       <PackagePath>UnityEngine.WindModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.WebModule.dll">
-      <PackagePath>UnityEngine.WebModule.dll</PackagePath>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityConnectModule.dll">
+      <PackagePath>UnityEngine.UnityConnectModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityAnalyticsModule.dll">
       <PackagePath>UnityEngine.UnityAnalyticsModule.dll</PackagePath>
@@ -523,11 +553,11 @@
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UNETModule.dll">
       <PackagePath>UnityEngine.UNETModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UIModule.dll">
-      <PackagePath>UnityEngine.UIModule.dll</PackagePath>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityWebRequestAudioModule.dll">
+      <PackagePath>UnityEngine.UnityWebRequestAudioModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityConnectModule.dll">
-      <PackagePath>UnityEngine.UnityConnectModule.dll</PackagePath>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityWebRequestWWWModule.dll">
+      <PackagePath>UnityEngine.UnityWebRequestWWWModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityWebRequestTextureModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestTextureModule.dll</PackagePath>
@@ -535,8 +565,8 @@
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityWebRequestModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.UnityWebRequestAudioModule.dll">
-      <PackagePath>UnityEngine.UnityWebRequestAudioModule.dll</PackagePath>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.PhysicsModule.dll">
+      <PackagePath>UnityEngine.PhysicsModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.AssetBundleModule.dll">
       <PackagePath>UnityEngine.AssetBundleModule.dll</PackagePath>
@@ -621,6 +651,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.HoloLens.dll">
       <PackagePath>UnityEngine.HoloLens.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\Vuforia.UnityExtensions.dll">
+      <PackagePath>Vuforia.UnityExtensions.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Kenyon\Github Project\HololensMedicalCare\Gesture\App\Gesture\UnityEngine.StandardEvents.dll">
       <PackagePath>UnityEngine.StandardEvents.dll</PackagePath>

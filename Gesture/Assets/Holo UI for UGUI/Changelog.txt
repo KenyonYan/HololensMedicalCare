@@ -1,0 +1,41 @@
+Version 1.8:
+- Updated scripts for Unity 5.3.
+
+Version 1.7:
+- Updated vertex modifing scripts (Unity 5.2.2f1 changes).
+
+Version 1.6:
+- Updated vertex modifing scripts (Unity 5.2 changes).
+- Improved UIDragObject, now handles canvas scaling and all canvas render modes.
+
+Version 1.5:
+- Added a tool to disable all the navigations with a single click.
+- Disabled all the navigations to prevent highlight getting stuck.
+- Added missing navigation property to the UITab editor script.
+
+Version 1.4:
+- Improved UIDragObject inertia dampening.
+- Fixed the Circular and Rectangular Raycast filter editor scripts not including the canvas scaling factor.
+- Fixed highlight transition editor script.
+
+Version 1.3:
+- Added constrain within canvas option to the UIDragObject script.
+
+Version 1.2:
+- Updated for unity 5.
+- Fixed AOT cross compile errors.
+- Improved UIButtonExtended_Target.
+- Improved UISelectField.
+
+Version 1.1:
+- Fixed Select Field not getting deselected when selecting an option.
+- Fixed few Select Field initialization problems.
+- Select Field will no longer construct the list when changing properties in edit mode (it was not intended).
+- The ColorBlockExtended default color multiplier value is now set to 1.
+- Fixed UITab initialization problems.
+- UIRectangularRaycastFilter now supports borders.
+- Added UIHighlightTransition script.
+- Fixed some highlight issues in the table rows.
+
+Version 1.0:
+- Initial release
