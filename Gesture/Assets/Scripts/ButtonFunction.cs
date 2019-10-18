@@ -85,45 +85,77 @@ public class ButtonFunction : MonoBehaviour {
         }
     }
 
-
-    private void MoveButton()
+    /// <summary>
+    /// 移动模式
+    /// </summary>
+    public void MoveButton()
     {
         gesAction.IsNavigationEnabled = false;
         ChangeR2MText();
     }
-
-    private void RotateButton()
+    /// <summary>
+    /// 旋转模式
+    /// </summary>
+    public void RotateButton()
     {
         gesAction.IsNavigationEnabled = true;
         ChangeM2RText();
     }
-
+    /// <summary>
+    /// 从移动模式切换为旋转模式
+    /// </summary>
     public void ChangeM2RText()
     {
         HololensMoveText.SetActive(true);
         HololensRotateText.SetActive(false);
     }
-
+    /// <summary>
+    /// 从旋转模式切换为移动模式
+    /// </summary>
     public void ChangeR2MText()
     {
         HololensMoveText.SetActive(false);
         HololensRotateText.SetActive(true);
     }
 
-
+    /// <summary>
+    /// 3D立体文字的更改模型
+    /// </summary>
     public void ChangeModel()
     {
-        //print("改变模型");
         _indexOfModels = (_indexOfModels + 1) % Models.Length;              //下标循环
         Transform trans = _displayModel.transform;
-        //获取模型位置组件，
-        //Vector3 trans = _displayModel.transform.TransformPoint(_displayModel.transform.localPosition);     //获取模型世界坐标
-        //print(trans.position.x + "," + trans.position.y + "," + trans.position.z + trans.name);
         
         Destroy(_displayModel);            //销毁当前显示的模型
         //在之前模型的位置再次生成新的模型，避免造成新模型回到初始位置
         _displayModel = Instantiate(Models[_indexOfModels], trans.position, Models[_indexOfModels].transform.rotation);
-        //_displayModel = Instantiate(Models[_indexOfModels], trans, Models[_indexOfModels].transform.rotation);
         _displayModel.transform.parent = _axisY.transform;
     }
+
+    /// <summary>
+    /// UI形式的下一个模型
+    /// </summary>
+    public void NextModel()
+    {
+        ChangeModel();
+    }
+
+    /// <summary>
+    /// UI形式的上一个模型
+    /// </summary>
+    public void PreModel()
+    {
+        _indexOfModels -= 1;
+        if (_indexOfModels < 0)
+        {
+            _indexOfModels = Models.Length-1;
+        }
+        Transform trans = _displayModel.transform;
+
+        Destroy(_displayModel);            //销毁当前显示的模型
+        //在之前模型的位置再次生成新的模型，避免造成新模型回到初始位置
+        _displayModel = Instantiate(Models[_indexOfModels], trans.position, Models[_indexOfModels].transform.rotation);
+        _displayModel.transform.parent = _axisY.transform;
+    }
+
 }
