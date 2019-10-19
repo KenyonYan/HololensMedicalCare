@@ -22,6 +22,6 @@ public class VoiceManager : MonoBehaviour {
 
     public void NextModel()
     {
-        changeModel.ChangeModel();              //切换模型
+        changeModel.NextModel();              //切换模型
     }
 }

@@ -53,8 +53,7 @@ public class Drag : MonoBehaviour {
                 break;
             }
         }
-
-        //print(nowModel.name);
+        
         if (nowModel.name == "head(Clone)")
         {
             ShowLuguXPic(index);

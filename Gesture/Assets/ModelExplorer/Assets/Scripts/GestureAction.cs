@@ -1,23 +1,43 @@
 ﻿using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
+
+
+public enum GestureType
+{
+    Move,
+    Rotate,
+    Zoom
+}
+
 /// <summary>
 /// GestureAction performs custom actions based on
 /// which gesture is being performed.
 /// </summary>
+/// 
 public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHandler, ISpeechHandler
 {
+    [Header("手势类型")]
+    public GestureType gestureType;
+
+    [Header("最大缩放尺寸")]
+    public float maxSize = 0.2f;
+    [Header("最小缩放尺寸")]
+    public float minSize = 0.1f;
+    [Header("缩放偏移精度")]
+    private float eps = 0.00001f;
+
+
     [Tooltip("Rotation max speed controls amount of rotation.")]
     [SerializeField]
+    [Header("旋转敏感度")]
     private float RotationSensitivity = 10.0f;
+    private bool isNavigationEnabled = true;              //移动(false)和旋转(true)之间的切换
 
-    private bool isNavigationEnabled = true;
-
-    private ButtonFunction bFunction;                   //按钮功能脚本
 
     void Start()
     {
-        bFunction = FindObjectOfType<ButtonFunction>();
+        gestureType = GestureType.Rotate;                 //开始默认为旋转模式
     }
 
 
@@ -25,6 +45,12 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
     {
         get { return isNavigationEnabled; }
         set { isNavigationEnabled = value; }
+    }
+
+    public GestureType GestureControl
+    {
+        get { return gestureType; }
+        set { gestureType = value; }
     }
 
     private Vector3 manipulationOriginalPosition = Vector3.zero;
@@ -36,18 +62,32 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
     void INavigationHandler.OnNavigationUpdated(NavigationEventData eventData)
     {
-        if (isNavigationEnabled)
+        if (gestureType == GestureType.Zoom)
         {
-            /* TODO: DEVELOPER CODING EXERCISE 2.c */
+            float sliderOffset = eventData.NormalizedOffset.x * RotationSensitivity;
+            print(sliderOffset);
+            GameObject model = GameObject.FindGameObjectWithTag("Model");
 
-            // 2.c: Calculate a float rotationFactor based on eventData's NormalizedOffset.x multiplied by RotationSensitivity.
-            // This will help control the amount of rotation.
+            if (model.transform.localScale.x - maxSize >= eps)
+            {
+                model.transform.localScale = new Vector3(maxSize, maxSize, maxSize);
+            }
+            else if (minSize - model.transform.localScale.x >= eps)
+            {
+                model.transform.localScale = new Vector3(minSize, minSize, minSize);
+            }
+            else
+            {
+                float NewX = model.transform.localScale.x + sliderOffset;
+                float NewY = model.transform.localScale.y + sliderOffset;
+                float NewZ = model.transform.localScale.z + sliderOffset;
+                model.transform.localScale = new Vector3(NewX, NewY, NewZ);
+            }
+        }
+        if (gestureType == GestureType.Rotate)
+        {
             float rotationFactor = eventData.NormalizedOffset.x * RotationSensitivity;
-            //float rotationFactorX = eventData.NormalizedOffset.y * RotationSensitivity;
-
-            // 2.c: transform.Rotate around the Y axis using rotationFactor.
             transform.Rotate(new Vector3(0, -1 * rotationFactor, 0));
-            //transform.Rotate(new Vector3(-1 * rotationFactorX, 0));
         }
     }
 
@@ -63,7 +103,7 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
     void IManipulationHandler.OnManipulationStarted(ManipulationEventData eventData)
     {
-        if (!isNavigationEnabled)
+        if (gestureType == GestureType.Move)
         {
             InputManager.Instance.PushModalInputHandler(gameObject);
 
@@ -73,11 +113,8 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
     void IManipulationHandler.OnManipulationUpdated(ManipulationEventData eventData)
     {
-        if (!isNavigationEnabled)
+        if (gestureType == GestureType.Move)
         {
-            /* TODO: DEVELOPER CODING EXERCISE 4.a */
-
-            // 4.a: Make this transform's position be the manipulationOriginalPosition + eventData.CumulativeDelta
             transform.position = manipulationOriginalPosition + eventData.CumulativeDelta;
         }
     }
@@ -97,12 +134,12 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
         if (eventData.RecognizedText.Equals("Move"))
         {
             isNavigationEnabled = false;
-            bFunction.ChangeR2MText();              //文本切换为旋转
+            gestureType = GestureType.Move;
         }
         else if (eventData.RecognizedText.Equals("Rotate"))
         {
             isNavigationEnabled = true;
-            bFunction.ChangeM2RText();              //文本切换为移动
+            gestureType = GestureType.Rotate;
         }
         else
         {

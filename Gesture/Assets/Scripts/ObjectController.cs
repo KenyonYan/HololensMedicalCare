@@ -126,11 +126,8 @@ public class ObjectController : MonoBehaviour, INavigationHandler, IManipulation
             // 2.c: Calculate a float rotationFactor based on eventData's NormalizedOffset.x multiplied by RotationSensitivity.
             // This will help control the amount of rotation.
             float rotationFactor = eventData.NormalizedOffset.x * RotationSensitivity;
-            //float rotationFactorX = eventData.NormalizedOffset.y * RotationSensitivity;
 
-            // 2.c: transform.Rotate around the Y axis using rotationFactor.
             transform.Rotate(new Vector3(0, -1 * rotationFactor, 0));
-            //transform.Rotate(new Vector3(-1 * rotationFactorX, 0));
         }
 
         if (isZoom)

@@ -25,12 +25,14 @@ public class ChangeGesture : MonoBehaviour {
         if (gestureText.text == "移动")
         {
             gestureText.text = "旋转";
-            gesAction.IsNavigationEnabled = false;
+            //gesAction.IsNavigationEnabled = false;
+            gesAction.GestureControl = GestureType.Move;
         }
         else
         {
             gestureText.text = "移动";
-            gesAction.IsNavigationEnabled = true;
+            //gesAction.IsNavigationEnabled = true;
+            gesAction.GestureControl = GestureType.Rotate;
         }
     }
 }
